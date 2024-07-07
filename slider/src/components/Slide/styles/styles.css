@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap');
+
+
+.swiper-container {
+    position: relative;
+    padding-left: 10%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+
+/*Swiper-slide*/
+
+.swiper-slide-next+.swiper-slide {
+    flex-basis: 20%;
+    height: auto;
+}
+
+.swiper-slide.swiper-slide-next+.swiper-slide img {
+    max-height: 65%;
+    max-width: 100%;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/*Swiper-slide-active*/
+.swiper-slide-active {
+    display: flex;
+    padding-top: 3%;
+    flex-basis: 60%;
+}
+
+.swiper-slide-active img {
+    max-width: 65%;
+    border-radius: 20px 20px 70px 20px;
+    transition: max-width .5s, border-radius .7s;
+}
+
+
+/*Swiper-slide-next*/
+
+.swiper-slide-next {
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+    padding-top: 7%;
+    height: 26em;
+    transition: transform 2s ease, flex-basis 0.3s, padding-top 0.5s;
+}
+
+.swiper-slide-next img {
+    max-width: 90%;
+    transition: max-width 0.5s;
+}
+
+/*Swiper-slide-acive-content*/
+
+.swiper-slide-prev {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.swiper-slide-prev img {
+    max-width: 90%;
+    transition: max-width 3s;
+    opacity: 0;
+}
+
+.swiper-slide-active h3{
+    font-size: 20px;
+    margin: 0;
+}
+
+.swiper-slide-active h2 {
+    color: rgb(42, 125, 158);
+    font-size: 30px;
+    margin: 0;
+}
+
+.swiper-slide-active .next-site {
+    display: none;
+}
+
+.swiper-slide-active .number {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.swiper-slide-active .slide-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.slide-content {
+    z-index: 100;
+}
+
+
+.swiper-slide-active .placeContainer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.swiper-slide-active .descriptionContainer {
+    display: flex;
+    flex-basis: 50%;
+    max-width: 60%;
+    flex-direction: column;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    text-align: end;
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 10px;
+    transition: bottom 0.5s, right 0.5s;
+}
+
+.swiper-slide-active .next-site {
+    display: none;
+}
+
+/*title*/
+
+.title {
+    display: flex;
+    color: rgb(77, 76, 76);
+    gap: 15px;
+    position: absolute;
+    top: 15%;
+    max-width: 18%;
+}
+
+/*swiper-slide-next-content*/
+
+.swiper-slide-next h3 {
+    display: none;
+}
+
+.swiper-slide-next .site {
+    display: none;
+}
+
+.swiper-slide-next .descriptionContainer .number {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.swiper-slide-next .descriptionContainer .next-site {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.swiper-slide-next .descriptionContainer {
+    display: flex;
+    height: 20%;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    color: white;
+}
+
+.swiper-slide-next .descriptionContainer .description {
+    display: none;
+}
+
+/*swiper-slide-content*/
+
+
+.swiper-slide.swiper-slide-next+.swiper-slide h3 {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-next+.swiper-slide .site {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-next+.swiper-slide .description {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-next+.swiper-slide .number {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.swiper-slide.swiper-slide-next+.swiper-slide .next-site {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.swiper-slide.swiper-slide-next+.swiper-slide .descriptionContainer {
+    color: white;
+    display: flex;
+    height: 20%;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 18%;
+    left: 7%;
+}
+
+/*buttons*/
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: rgb(42, 78, 145);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgb(56, 97, 172); 
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-family: 'Material Symbols Outlined';
+    font-size: 50px;
+    font-weight: 100;
+    color: white;
+    content: 'navigate_before';
+}
+
+.swiper-button-next::after {
+    content: 'navigate_next';
+}
+
+.swiper-button-prev {
+    left: 58%; 
+    top: 58%;
+}
+
+.swiper-button-next {
+    top: 65.5%;
+    right: 36%; 
+}
+
+
+/*pagination*/
+
+.paginationContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translate(73em, -14.8em);
+}
+
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: start;
+    width: auto;
+}
+
+.swiper-pagination-bullet {
+    display: none;
+}
+
+.swiper-pagination-bullet-active {
+    display: inline;
+    background: none;
+}
+
+.swiper-pagination-bullet-active::before {
+    content: attr(data-index) " / " attr(data-total);
+    font-size: 16px;
+    color: black;
+    white-space: nowrap;
+}
+
+.line {
+    width: 100px;
+    height: 1.5px;
+    background-color: gray;
+    margin-right: 10px;
+    margin-left: -30px;
+}
+
+.pause-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*pagination pause button*/
+
+.pause-button {
+    background: #28282E;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Material Symbols Outlined';
+    font-size: 24px;
+    color: white;
+}
+
+.pause-button::before {
+    content: attr(data-icon);
+}
+
+.pause-button:hover {
+    background: #3c3c42;
+}
