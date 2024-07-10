@@ -56,10 +56,6 @@ const Slide = () => {
 
   return (
     <div className="swiper-container">
-      <div className='title'>
-        <h1>Turismo del Meta</h1>
-        <p>Lorem ipsum dolor sit ametc sit amet sit amet</p>
-      </div>
       <Swiper
         ref={swiperRef}
         slidesPerView={2.5}
@@ -76,6 +72,10 @@ const Slide = () => {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
+        <div className='title'>
+          <h1>Turismo del Meta</h1>
+          <p>Lorem ipsum dolor sit ametc sit amet sit amet</p>
+        </div>
         {swipers.map((swiper, index) => (
           <SwiperSlide key={index}>
             <div className='slide-content'>
